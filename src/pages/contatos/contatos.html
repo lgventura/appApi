@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contatos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <span *ngFor="let c of contatos">
+    <ion-item><ion-icon name="contact"></ion-icon> {{c.nome}}
+      <button (click)="editContact(c.id, c.nome, c.sobrenome, c.email, c.telefone)" ion-button clear outline item-end icon-start><ion-icon name="create"></ion-icon></button>
+      <button class="delete-btn" ion-button clear outline item-end icon-start><ion-icon name="close"></ion-icon></button>
+      
+    </ion-item>
+  </span>
+
+  <ion-fab right bottom>
+      <button ion-fab mini (click)="openAddPage()" color="primary"><ion-icon name="add"></ion-icon><ion-icon name="contact"></ion-icon></button>
+    </ion-fab>
+</ion-content>
