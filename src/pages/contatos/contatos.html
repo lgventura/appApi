@@ -9,8 +9,9 @@
 <ion-content>
   <span *ngFor="let c of contatos">
     <ion-item><ion-icon name="contact"></ion-icon> {{c.nome}}
-      <button (click)="editContact(c.id, c.nome, c.sobrenome, c.email, c.telefone)" ion-button clear outline item-end icon-start><ion-icon name="create"></ion-icon></button>
-      <button class="delete-btn" ion-button clear outline item-end icon-start><ion-icon name="close"></ion-icon></button>
+      <button (click)="verMensagens(c.id)" ion-button clear outline item-end icon-start><ion-icon name="eye"></ion-icon></button>
+      <button (click)="editarContato(c.id, c.nome, c.sobrenome, c.email, c.telefone)" ion-button clear outline item-end icon-start><ion-icon name="create"></ion-icon></button>
+      <button (click)="deletar(c.id)" class="delete-btn" ion-button clear outline item-end icon-start><ion-icon name="close"></ion-icon></button>
       
     </ion-item>
   </span>

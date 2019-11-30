@@ -19,22 +19,22 @@
 
         <ion-item>
           <ion-label stacked>Nome</ion-label>
-          <ion-input [ngModel]="nome" type="text"></ion-input>
+          <ion-input [(ngModel)]="nome" type="text" value="{{name}}"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label stacked>Sobrenome</ion-label>
-          <ion-input [ngModel]="sobrenome" type="text"></ion-input>
+          <ion-input [(ngModel)]="sobrenome" type="text" value="{{sobrenome}}"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>E-mail</ion-label>
-            <ion-input [ngModel]="email" type="email"></ion-input>
+            <ion-input [(ngModel)]="email" type="email" value="{{email}}"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label stacked>Telefone</ion-label>
-            <ion-input [ngModel]="telefone" type="text" name="telefone" placeholder="(99)9 9999-9999" [brmasker]="{mask:'(00)9 0000-0000', len:15}"></ion-input>
+            <ion-input [(ngModel)]="telefone" type="text" value="{{telefone}}" name="telefone" placeholder="(99)9 9999-9999" [brmasker]="{mask:'(00)9 0000-0000', len:15}"></ion-input>
         </ion-item>
       
       </ion-list>
@@ -43,10 +43,10 @@
   <ion-grid>
     <ion-row>
       <ion-col width-50>
-          <button class="btn-cancel" ion-button full>Cancelar</button>
+          <button class="btn-cancel" (click)="voltar()" ion-button full>Cancelar</button>
       </ion-col>
       <ion-col width-50>
-          <button class="btn-save" ion-button full>Salvar</button>
+          <button class="btn-save" (click)="salvar()" ion-button full>Salvar</button>
       </ion-col>
     </ion-row>
   </ion-grid>
